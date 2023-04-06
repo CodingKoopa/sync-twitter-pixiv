@@ -2,6 +2,10 @@
 Use extracted URL,follow accounts in pixiv by selenium in python.
 
 ## Preparation
+Install dependencies using [PDM](https://pdm.fming.dev/latest/).
+
+    python -m pdm install
+
 Create .env based on .envsample.
 
 

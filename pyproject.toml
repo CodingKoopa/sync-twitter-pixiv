@@ -1,0 +1,12 @@
+[project]
+readme = "README.md"
+requires-python = ">=3.7"
+authors = [
+    {name = "M1nPy"},
+    {name = "Lucy Loerker", email = "codingkoopa@gmail.com"},
+]
+
+[project.urls]
+repository = "https://github.com/CodingKoopa/sync-twitter-pixiv"
+
+[tool.pdm]

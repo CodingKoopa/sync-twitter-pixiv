@@ -1,2 +1,4 @@
+/.pdm-python
+/.venv
 .env
 chromedriver.exe
