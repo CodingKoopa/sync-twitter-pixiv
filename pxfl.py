@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from selenium import webdriver
 from selenium.common import exceptions as selenium_exceptions
 from dotenv import load_dotenv
