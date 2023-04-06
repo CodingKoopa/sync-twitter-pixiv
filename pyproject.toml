@@ -5,6 +5,9 @@ authors = [
     {name = "M1nPy"},
     {name = "Lucy Loerker", email = "codingkoopa@gmail.com"},
 ]
+dependencies = [
+    "dotenv~=0.0.5",
+]
 
 [project.urls]
 repository = "https://github.com/CodingKoopa/sync-twitter-pixiv"
