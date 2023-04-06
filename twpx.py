@@ -12,13 +12,11 @@ rege_pixiv = r'.*pixiv.*'
 
 # .envロード
 load_dotenv()
-consumer_key = os.getenv("API_KEY")
-consumer_secret = os.getenv("SECRET_KEY")
-access_token = os.getenv("ACCESS_TOKEN")
-access_token_secret = os.getenv("ACCESS_TOKEN_SECRET")
+bearer_token = os.getenv("TWITTER_BEARER_TOKEN")
 # 認証
-auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-auth.set_access_token(access_token, access_token_secret)
+auth = tweepy.OAuth2BearerHandler(bearer_token)
+
+sys.exit()
 
 api = tweepy.API(auth)
 
