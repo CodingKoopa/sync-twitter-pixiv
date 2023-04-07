@@ -18,8 +18,6 @@ bearer_token = os.getenv("TWITTER_BEARER_TOKEN")
 # 認証
 auth = tweepy.OAuth2BearerHandler(bearer_token)
 
-sys.exit()
-
 api = tweepy.API(auth)
 
 # フォロー取得
