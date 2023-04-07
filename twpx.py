@@ -7,7 +7,7 @@ import re
 import os
 from dotenv import load_dotenv
 import pandas as pd
-from tweepy.error import RateLimitError
+from tweepy.errors import TooManyRequests
 
 # 正規表現
 rege_pixiv = r'.*pixiv.*'
@@ -36,8 +36,8 @@ for following in hataraku_data:
             i += 1
             status_date = api.get_user(following)
             break
-        except RateLimitError:
-            print(str(i)+"RateLimitError")#  debug
+        except TooManyRequests:
+            print(str(i)+"TooManyRequests")#  debug
             if i > 20:
                 sys.exit()
             sleep(60)
