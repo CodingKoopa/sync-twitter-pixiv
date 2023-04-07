@@ -1,5 +1,6 @@
 /.pdm-python
 /.venv
+/.pdm.toml
 .env
 chromedriver.exe
 pixivlink.csv
