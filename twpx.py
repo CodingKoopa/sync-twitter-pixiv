@@ -5,8 +5,8 @@ from time import sleep
 import sys
 import re
 import os
+import csv
 from dotenv import load_dotenv
-import pandas as pd
 from tweepy.errors import TooManyRequests
 
 # 正規表現
@@ -69,5 +69,9 @@ for following in hataraku_data:
     n += 1
 
 # データフレームに変換してcsv出力
-df_pixivlinks=pd.DataFrame(list_pixivlinks, columns=["name", "url"]).fillna(False)
-df_pixivlinks.to_csv(os.getcwd()+'/pixivlink.csv')
+with open(os.getcwd()+'/pixivlink.csv', 'w', newline='') as f:
+    writer = csv.writer(f)
+    writer.writerow(['name','url'])
+    for row in list_pixivlinks:
+        writer.writerow(row)
+
