@@ -25,7 +25,7 @@ auth = tweepy.OAuth1UserHandler(consumer_key, consumer_secret, access_token, acc
 api = tweepy.API(auth)
 
 # フォロー取得
-hataraku_data = api.get_friend_ids(user_id="M1nPy")
+hataraku_data = api.get_friend_ids(screen_name=consumer_screen_name)
 
 list_pixivlinks = []
 # pixiv取得
@@ -36,7 +36,7 @@ for following in hataraku_data:
         # 制限かかったら1分に一回try、20回で終了
         try:
             i += 1
-            status_date = api.get_user(following)
+            status_date = api.get_user(user_id=following)
             break
         except TooManyRequests:
             print(str(i)+"TooManyRequests")#  debug
