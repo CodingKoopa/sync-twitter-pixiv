@@ -69,7 +69,7 @@ for following in hataraku_data:
     n += 1
 
 # データフレームに変換してcsv出力
-with open(os.getcwd()+'/pixivlink.csv', 'w', newline='') as f:
+with open('pixivlink.csv', 'w', newline='') as f:
     writer = csv.writer(f)
     writer.writerow(['name','url'])
     for row in list_pixivlinks:
