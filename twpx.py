@@ -21,7 +21,7 @@ auth = tweepy.OAuth2BearerHandler(bearer_token)
 api = tweepy.API(auth)
 
 # フォロー取得
-hataraku_data = api.friends_ids("M1nPy")
+hataraku_data = api.get_friend_ids(user_id="M1nPy")
 
 list_pixivlinks = []
 # pixiv取得
